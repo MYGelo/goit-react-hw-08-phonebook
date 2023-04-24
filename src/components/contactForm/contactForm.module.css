@@ -1,0 +1,10 @@
+.container {
+    width: 333px;
+    display: flex;
+    flex-direction:column;
+     }
+
+     .btn {
+        margin: 5px 0 ;
+        
+     }

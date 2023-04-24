@@ -1,0 +1,12 @@
+.contact__list {
+  padding: 0;
+  list-style: decimal;
+}
+
+.contact__list__item {
+  width: 333px;
+  text-align: end;
+}
+.contact__list__item:nth-child(2n + 1) {
+  background-color: gainsboro;
+}
