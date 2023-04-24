@@ -17,6 +17,12 @@ export default function Navigation() {
           <StyledLink className={css.nav__link} to="/" end>
             Home
           </StyledLink>
+          <StyledLink className={css.nav__link} to="/register" end>
+            Register
+          </StyledLink>
+          <StyledLink className={css.nav__link} to="/login" end>
+            Login
+          </StyledLink>
           <StyledLink className={css.nav__link} to="/phonebook" end>
             Phonebook
           </StyledLink>
