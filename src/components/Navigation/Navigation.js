@@ -6,9 +6,6 @@ import css from './Navigation.module.css';
 
 export default function Navigation() {
   const StyledLink = styled(NavLink)`
-    color: black;
-    text-decoration: none;
-
     &.active {
       color: orange;
     }
@@ -20,8 +17,8 @@ export default function Navigation() {
           <StyledLink className={css.nav__link} to="/" end>
             Home
           </StyledLink>
-          <StyledLink className={css.nav__link} to="/movies" end>
-            Movies
+          <StyledLink className={css.nav__link} to="/phonebook" end>
+            Phonebook
           </StyledLink>
         </nav>
       </header>
