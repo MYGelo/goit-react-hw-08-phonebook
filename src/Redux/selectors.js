@@ -12,6 +12,10 @@ export const selectError = state => state.contacts.error;
 
 export const selectSingup = state => state.users;
 
-export const selectLogin = state => state.users;
+//
 
-export const selectCurrentUser = state => state.users.current;
+export const selectIsLoggedIn = state => state.contacts.isLoggedIn;
+
+export const selectUser = state => state.contacts.user;
+
+export const selectIsRefreshing = state => state.contacts.isRefreshing;
