@@ -23,8 +23,8 @@ export default function Navigation() {
           <StyledLink className={css.nav__link} to="/login" end>
             Login
           </StyledLink>
-          <StyledLink className={css.nav__link} to="/phonebook" end>
-            Phonebook
+          <StyledLink className={css.nav__link} to="/contacts" end>
+            Contacts
           </StyledLink>
         </nav>
       </header>
