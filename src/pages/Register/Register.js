@@ -1,15 +1,27 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { addUser } from 'Redux/operations';
+import { selectSingup } from 'Redux/selectors';
 import css from './Register.module.css';
 
 export default function Register() {
+  const signup = useSelector(selectSingup);
+  const dispatch = useDispatch();
+  console.log(signup);
+
   const handleSubmit = e => {
     e.preventDefault();
 
     const name = e.target.elements.name.value;
     const email = e.target.elements.email.value;
-    const pass = e.target.elements.number.value;
-    console.log(name);
-    console.log(email);
-    console.log(pass);
+    const password = e.target.elements.number.value;
+
+    dispatch(
+      addUser({
+        name: name,
+        email: email,
+        password: password,
+      })
+    );
   };
   return (
     <div className={css.container}>
