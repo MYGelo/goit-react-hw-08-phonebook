@@ -14,8 +14,8 @@ export const selectSingup = state => state.users;
 
 //
 
-export const selectIsLoggedIn = state => state.contacts.isLoggedIn;
+export const selectIsLoggedIn = state => state.auth.isLoggedIn;
 
-export const selectUser = state => state.contacts.user;
+export const selectUser = state => state.auth.user;
 
-export const selectIsRefreshing = state => state.contacts.isRefreshing;
+export const selectIsRefreshing = state => state.auth.isRefreshing;

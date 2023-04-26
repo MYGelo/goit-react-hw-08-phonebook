@@ -1,5 +1,6 @@
+import { UserMenu } from 'components/Usermenu/Usermenu';
 import { useDispatch } from 'react-redux';
-import { login } from 'Redux/operations';
+import { logIn } from 'Redux/Auth/operations';
 
 import css from './Login.module.css';
 
@@ -14,9 +15,9 @@ export default function Login() {
     e.preventDefault();
     const form = e.currentTarget;
     dispatch(
-      login({
-        email: form.element.email.value,
-        password: form.element.password.value,
+      logIn({
+        email: form.elements.email.value,
+        password: form.elements.password.value,
       })
     );
     form.reset();
@@ -44,13 +45,10 @@ export default function Login() {
           Login
         </button>
       </form>
-
       <div>
-        <span> user</span>
-        {/* {currentUser.map(user => ( */}
-        {/* <p>{user.name}</p> */}
-        {/* ))} */}
+        <UserMenu></UserMenu>
       </div>
+      <div></div>
     </div>
   );
 }

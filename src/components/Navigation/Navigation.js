@@ -1,4 +1,3 @@
-import { useAuth } from 'hooks/useAuth';
 import { Loader } from 'components/loader/loader';
 import { Suspense } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
@@ -6,9 +5,6 @@ import styled from 'styled-components';
 import css from './Navigation.module.css';
 
 export default function Navigation() {
-  const { isLoggedIn } = useAuth();
-  console.log(isLoggedIn);
-
   const StyledLink = styled(NavLink)`
     &.active {
       color: orange;
@@ -28,11 +24,9 @@ export default function Navigation() {
             Login
           </StyledLink>
 
-          {/* {isLoggedIn && ( */}
           <StyledLink className={css.nav__link} to="/contacts" end>
             Contacts
           </StyledLink>
-          {/* )} */}
         </nav>
       </header>
 

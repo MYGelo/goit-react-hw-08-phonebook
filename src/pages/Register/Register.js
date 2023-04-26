@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { register } from 'Redux/operations';
+import { register } from 'Redux/Auth/operations';
 // import { register } from 'redux/auth/operations';
 import css from './Register.module.css';
 
