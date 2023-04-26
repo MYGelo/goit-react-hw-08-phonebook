@@ -9,7 +9,7 @@ export const UserMenu = () => {
 
   return (
     <span className={css.position}>
-      Welcome, {user.name}{' '}
+      Hi, {user.name}{' '}
       <button
         type="button"
         className={css.btn_style}
