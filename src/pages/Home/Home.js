@@ -1,5 +1,4 @@
 import { useAuth } from 'hooks';
-import { Link } from 'react-router-dom';
 import css from './Home.module.css';
 
 export default function Home() {
@@ -10,7 +9,10 @@ export default function Home() {
       {isLoggedIn ? (
         <p>
           {user.name}, to see the list of contacts, go to the{' '}
-          <a href="https://mygelo.github.io/goit-react-hw-08-phonebook/contacts">
+          <a
+            className={css.link}
+            href="https://mygelo.github.io/goit-react-hw-08-phonebook/contacts"
+          >
             contacts
           </a>
         </p>
