@@ -1,14 +1,3 @@
-// import { configureStore } from '@reduxjs/toolkit';
-// import { tasksReducer } from './contactSlice';
-import { filtersReducer } from './filtersSlice';
-
-// export const store = configureStore({
-//   reducer: {
-//     contacts: tasksReducer,
-//     filters: filtersReducer,
-//   },
-// });
-
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import {
   persistStore,
@@ -22,6 +11,7 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { tasksReducer } from './contactSlice';
+import { filtersReducer } from './filtersSlice';
 import { authReducer } from './Auth/slice';
 
 const middleware = [
@@ -50,3 +40,14 @@ export const store = configureStore({
 });
 
 export const persistor = persistStore(store);
+
+// import { configureStore } from '@reduxjs/toolkit';
+// import { tasksReducer } from './contactSlice';
+// import { filtersReducer } from './filtersSlice';
+
+// export const store = configureStore({
+//   reducer: {
+//     contacts: tasksReducer,
+//     filters: filtersReducer,
+//   },
+// });

@@ -23,7 +23,7 @@ export const ContactsForm = () => {
     dispatch(
       addContact({
         name: inputValue,
-        phone: form.elements.number.value,
+        number: form.elements.number.value,
       })
     );
 

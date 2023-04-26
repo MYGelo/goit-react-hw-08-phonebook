@@ -1,10 +1,15 @@
 import { useSelector, useDispatch } from 'react-redux';
+
 import { deleteContact } from 'Redux/operations';
+
 import { selectStatusFilter, selectTasks } from '../../Redux/selectors';
 import css from './contactList.module.css';
 
 export const ContactList = () => {
   const contacts = useSelector(selectTasks);
+
+  console.log(contacts);
+
   const filter = useSelector(selectStatusFilter).toLowerCase();
   const dataNormalize = filter.toLowerCase();
 

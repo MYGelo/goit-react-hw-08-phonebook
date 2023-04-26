@@ -10,10 +10,6 @@ export const useAuth = () => {
   const isRefreshing = useSelector(selectIsRefreshing);
   const user = useSelector(selectUser);
 
-  console.log(`isLoggedIn`, isLoggedIn);
-  console.log(`isRefreshing`, isRefreshing);
-  console.log(`user`, user);
-
   return {
     isLoggedIn,
     isRefreshing,
