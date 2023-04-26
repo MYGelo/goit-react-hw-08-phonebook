@@ -1,0 +1,20 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 41px;
+  box-shadow: 0px -2px 7px 0px grey;
+
+  margin-top: 10px;
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.text {
+  margin: 0 10px;
+}
+.link {
+  text-decoration: none;
+}

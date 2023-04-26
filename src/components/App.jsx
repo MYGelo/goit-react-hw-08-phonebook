@@ -6,6 +6,7 @@ import { useAuth } from 'hooks';
 import { refreshUser } from 'Redux/Auth/operations';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
+import { Footer } from './footer/footer';
 
 const Navigation = lazy(() => import('./Navigation/Navigation'));
 const Home = lazy(() => import('pages/Home/Home'));
@@ -51,6 +52,7 @@ export const App = () => {
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer></Footer>
     </Suspense>
   );
 };

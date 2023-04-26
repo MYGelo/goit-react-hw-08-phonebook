@@ -16,7 +16,7 @@ export const ContactFilter = () => {
 
   return (
     <div>
-      <label htmlFor={filterInputId}>Find contacts by</label>
+      <label htmlFor={filterInputId}> Find contacts by </label>
       <input
         id={filterInputId}
         type="text"

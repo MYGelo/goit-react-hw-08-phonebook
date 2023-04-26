@@ -22,8 +22,8 @@ export default function Phonebook() {
       <ContactsForm></ContactsForm>
       <h2>Contacts</h2>
       <ContactFilter></ContactFilter>
-      {isLoading && !error && <Loader />}
       <ContactList />
+      {isLoading && !error && <Loader />}
     </div>
   );
 }
