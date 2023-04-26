@@ -1,4 +1,5 @@
 import { useAuth } from 'hooks';
+import { Link } from 'react-router-dom';
 import css from './Home.module.css';
 
 export default function Home() {
@@ -18,14 +19,14 @@ export default function Home() {
           hello, plase{' '}
           <a
             className={css.link}
-            href="https:/mygelo.github.io/goit-react-hw-08-phonebook/login"
+            href="https://mygelo.github.io/goit-react-hw-08-phonebook/login"
           >
             login
           </a>{' '}
           or{' '}
           <a
             className={css.link}
-            href="http:/https:/mygelo.github.io/goit-react-hw-08-phonebook/register"
+            href="https://mygelo.github.io/goit-react-hw-08-phonebook/register"
           >
             register
           </a>{' '}
