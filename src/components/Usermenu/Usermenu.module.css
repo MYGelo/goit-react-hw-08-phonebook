@@ -1,5 +1,11 @@
 .position {
   /* position: absolute;
   left: 90%; */
-  margin-left: 52px;
+  /* margin-left: 52px; */
+  position: absolute;
+  right: 0;
+}
+
+.btn_style {
+  margin: 0 10px;
 }

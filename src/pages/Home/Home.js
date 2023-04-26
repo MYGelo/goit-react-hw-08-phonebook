@@ -9,18 +9,23 @@ export default function Home() {
       {isLoggedIn ? (
         <p>
           {user.name}, to see the list of contacts, go to the{' '}
-          <a href="http:/goit-react-hw-08-phonebook/contacts">contacts</a>
+          <a href="https://mygelo.github.io/goit-react-hw-08-phonebook/contacts">
+            contacts
+          </a>
         </p>
       ) : (
         <p>
           hello, plase{' '}
-          <a className={css.link} href="http:/goit-react-hw-08-phonebook/login">
+          <a
+            className={css.link}
+            href="https:/mygelo.github.io/goit-react-hw-08-phonebook/login"
+          >
             login
           </a>{' '}
           or{' '}
           <a
             className={css.link}
-            href="http:/goit-react-hw-08-phonebook/register"
+            href="http:/https:/mygelo.github.io/goit-react-hw-08-phonebook/register"
           >
             register
           </a>{' '}

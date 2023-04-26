@@ -31,13 +31,12 @@ export default function Navigation() {
               </StyledLink>
             </>
           )}
-
           {isLoggedIn && (
             <>
               <StyledLink className={css.nav__link} to="/contacts" end>
                 Contacts
               </StyledLink>
-              <UserMenu></UserMenu>
+              <UserMenu />
             </>
           )}
         </nav>

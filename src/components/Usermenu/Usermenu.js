@@ -10,7 +10,11 @@ export const UserMenu = () => {
   return (
     <span className={css.position}>
       Welcome, {user.name}{' '}
-      <button type="button" onClick={() => dispatch(logOut())}>
+      <button
+        type="button"
+        className={css.btn_style}
+        onClick={() => dispatch(logOut())}
+      >
         Logout
       </button>
     </span>

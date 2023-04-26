@@ -1,4 +1,5 @@
 .nav__link {
+  position: relative;
   margin-left: 10px;
   color: black;
   text-decoration: none;
