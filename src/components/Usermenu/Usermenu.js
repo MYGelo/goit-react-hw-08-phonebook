@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux';
 import { logOut } from 'Redux/Auth/operations';
 import css from './Usermenu.module.css';
 
+import { BiLogOut } from 'react-icons/bi';
+
 export const UserMenu = () => {
   const dispatch = useDispatch();
   const { user } = useAuth();
@@ -15,7 +17,7 @@ export const UserMenu = () => {
         className={css.btn_style}
         onClick={() => dispatch(logOut())}
       >
-        Logout
+        <BiLogOut viewBox="2 2 20 20" />
       </button>
     </span>
   );

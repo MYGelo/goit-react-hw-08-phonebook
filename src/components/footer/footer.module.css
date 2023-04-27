@@ -17,4 +17,9 @@
 }
 .link {
   text-decoration: none;
+  color: black;
+}
+.link:hover,
+.link:focus {
+  color: orange;
 }

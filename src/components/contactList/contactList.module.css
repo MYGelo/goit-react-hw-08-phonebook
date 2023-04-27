@@ -4,9 +4,22 @@
 }
 
 .contact__list__item {
-  width: 333px;
-  text-align: end;
+  display: flex;
+  justify-content: space-between;
 }
 .contact__list__item:nth-child(2n + 1) {
   background-color: gainsboro;
+}
+
+.contact__style {
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact__list__name {
+  margin-left: 5px;
+}
+.contact__list__number {
+  margin-right: 5px;
 }

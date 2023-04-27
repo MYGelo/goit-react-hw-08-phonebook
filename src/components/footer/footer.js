@@ -5,10 +5,11 @@ import { GoMarkGithub } from 'react-icons/go';
 export const Footer = () => {
   return (
     <div className={css.footer}>
-      <GoMarkGithub />
-      <span className={css.text}> Developed by </span>
       <a className={css.link} href="https://github.com/MYGelo">
-        <span> MYGelo </span>
+        <span>
+          <GoMarkGithub /> <span className={css.text}> Developed by </span>
+          MYGelo
+        </span>
       </a>
     </div>
   );

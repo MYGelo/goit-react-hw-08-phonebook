@@ -4,6 +4,8 @@ import css from './contactForm.module.css';
 import { selectTasks } from 'Redux/selectors';
 import { addContact } from 'Redux/operations';
 
+import { BiUser, BiPhone } from 'react-icons/bi';
+
 export const ContactsForm = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectTasks);
@@ -31,30 +33,38 @@ export const ContactsForm = () => {
   };
 
   return (
-    <>
-      <form onSubmit={handleSubmit} className={css.container}>
-        <label>Name</label>
+    <form onSubmit={handleSubmit} className={css.container}>
+      {/* <label className={css.label}>Name</label> */}
+      <div className={css.margin}>
+        <span style={{ position: 'absolute' }}>
+          <BiUser viewBox="-2 -2 24 24" />
+        </span>
         <input
+          className={css.inputs}
           type="text"
           name="text"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
-          // placeholder="Enter name..."
         />
-        <label>Number</label>
+      </div>
+      {/* <label className={css.label}>Number</label> */}
+      <div className={css.margin}>
+        <span style={{ position: 'absolute', margin: '2px 2px 2px 1px' }}>
+          <BiPhone viewBox="0 0 22 22" />
+        </span>
         <input
+          className={css.inputs}
           type="tel"
           name="number"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
-          // placeholder="Enter number..."
         />
-        <Button className={css.btn} type="submit">
-          Add contact
-        </Button>
-      </form>
-    </>
+      </div>
+      <Button className={css.btn} type="submit">
+        Add contact
+      </Button>
+    </form>
   );
 };

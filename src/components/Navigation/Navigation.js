@@ -6,6 +6,8 @@ import { NavLink, Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 import css from './Navigation.module.css';
 
+import { BiHome, BiSave } from 'react-icons/bi';
+
 export default function Navigation() {
   const StyledLink = styled(NavLink)`
     &.active {
@@ -18,7 +20,7 @@ export default function Navigation() {
       <header className={css.header}>
         <nav>
           <StyledLink className={css.nav__link} to="/" end>
-            Home
+            <BiHome />
           </StyledLink>
 
           {!isLoggedIn && (
@@ -34,7 +36,7 @@ export default function Navigation() {
           {isLoggedIn && (
             <>
               <StyledLink className={css.nav__link} to="/contacts" end>
-                Contacts
+                <BiSave />
               </StyledLink>
               <UserMenu />
             </>

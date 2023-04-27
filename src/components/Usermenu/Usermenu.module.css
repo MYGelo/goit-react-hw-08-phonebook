@@ -7,5 +7,10 @@
 }
 
 .btn_style {
-  margin: 0 10px;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+.btn_style:hover,
+.btn_style:focus {
+  color: orange;
 }

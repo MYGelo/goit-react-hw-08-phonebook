@@ -1,10 +1,42 @@
 .container {
-    width: 333px;
-    display: flex;
-    flex-direction:column;
-     }
+  width: 333px;
+  display: flex;
+  flex-direction: column;
+}
 
-     .btn {
-        margin: 5px 0 ;
-        
-     }
+.btn {
+  margin: 5px 0;
+  border-radius: 10px;
+  border: 1px solid black;
+  /* background-color: orange; */
+  color: black;
+}
+.btn:hover,
+.btn:focus {
+  border: 1px solid orange;
+}
+
+.inputs {
+  width: 300px;
+  margin-left: 23px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+.inputs:focus-visible {
+  outline: 1px solid transparent;
+}
+
+.margin {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 5px 0;
+}
+.margin:hover,
+.margin:focus {
+  color: orange;
+  border: 1px solid orange;
+}
+
+.label {
+  text-align: center;
+}
