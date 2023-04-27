@@ -1,12 +1,12 @@
 import { Loader } from 'components/loader/loader';
-import { UserMenu } from 'components/Usermenu/Usermenu';
 import { useAuth } from 'hooks';
-import { Suspense } from 'react';
+import { lazy, Suspense } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 import css from './Navigation.module.css';
-
 import { BiHome, BiSave } from 'react-icons/bi';
+
+const UserMenu = lazy(() => import('components/Usermenu/Usermenu'));
 
 export default function Navigation() {
   const StyledLink = styled(NavLink)`
@@ -22,8 +22,14 @@ export default function Navigation() {
           <StyledLink className={css.nav__link} to="/" end>
             <BiHome />
           </StyledLink>
-
-          {!isLoggedIn && (
+          {isLoggedIn ? (
+            <>
+              <StyledLink className={css.nav__link} to="/contacts" end>
+                <BiSave />
+              </StyledLink>
+              <UserMenu />
+            </>
+          ) : (
             <>
               <StyledLink className={css.nav__link} to="/register" end>
                 Register
@@ -31,14 +37,6 @@ export default function Navigation() {
               <StyledLink className={css.nav__link} to="/login" end>
                 Login
               </StyledLink>
-            </>
-          )}
-          {isLoggedIn && (
-            <>
-              <StyledLink className={css.nav__link} to="/contacts" end>
-                <BiSave />
-              </StyledLink>
-              <UserMenu />
             </>
           )}
         </nav>

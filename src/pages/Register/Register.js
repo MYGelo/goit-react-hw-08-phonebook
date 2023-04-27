@@ -1,6 +1,6 @@
+import { Button } from 'components/Button/Button';
 import { useDispatch } from 'react-redux';
 import { register } from 'Redux/Auth/operations';
-// import { register } from 'redux/auth/operations';
 import css from './Register.module.css';
 
 export default function Register() {
@@ -23,6 +23,7 @@ export default function Register() {
     <form onSubmit={handleSubmit} autoComplete="off" className={css.container}>
       <label>Name</label>
       <input
+        className={css.inputs}
         type="text"
         name="name"
         pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -32,6 +33,7 @@ export default function Register() {
       />
       <label>Mail</label>
       <input
+        className={css.inputs}
         type="email"
         name="email"
         // pattern=".+@globex\.com"
@@ -39,11 +41,11 @@ export default function Register() {
         required
       ></input>
       <label>Password</label>
-      <input type="password" name="password" required />
-      <button className={css.btn} type="submit">
+      <input className={css.inputs} type="password" name="password" required />
+      <Button style={{ padding: '5px 10px' }} type="submit">
         {' '}
         Register
-      </button>
+      </Button>
     </form>
   );
 }

@@ -3,14 +3,12 @@ import { useSelector, useDispatch } from 'react-redux';
 import { deleteContact } from 'Redux/operations';
 import { selectStatusFilter, selectTasks } from 'Redux/selectors';
 import css from './contactList.module.css';
+import PropTypes from 'prop-types';
 
 export const ContactList = () => {
   const contacts = useSelector(selectTasks);
-  console.log(`contacts`, contacts);
-
   const filter = useSelector(selectStatusFilter).toLowerCase();
   const dataNormalize = filter.toLowerCase();
-
   const normalizedContacts = contacts.filter(contact =>
     contact.name.toLowerCase().includes(dataNormalize)
   );
@@ -26,12 +24,6 @@ export const ContactList = () => {
                 : {contact.number}
               </span>
             </div>
-            {/* <button
-              type="button"
-              onClick={() => dispatch(deleteContact(contact.id))}
-            >
-              Delete
-            </button> */}
             <Button onClick={() => dispatch(deleteContact(contact.id))}>
               Delete
             </Button>
@@ -40,4 +32,9 @@ export const ContactList = () => {
       </ul>
     </div>
   );
+};
+
+ContactList.propTypes = {
+  name: PropTypes.string,
+  number: PropTypes.string,
 };

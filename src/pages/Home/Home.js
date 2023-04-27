@@ -10,18 +10,18 @@ export default function Home() {
       {isLoggedIn ? (
         <p>
           {user.name}, to see the list of contacts, go to the{' '}
-          <Link className={css.link} Link to="/contacts" end>
+          <Link className={css.link} to="/contacts">
             contacts
           </Link>
         </p>
       ) : (
         <p>
           hello, plase{' '}
-          <Link to="/login" className={css.link} end>
+          <Link to="/login" className={css.link}>
             login
           </Link>{' '}
           or{' '}
-          <Link className={css.link} to="/register" end>
+          <Link className={css.link} to="/register">
             register
           </Link>{' '}
           new phonebook list

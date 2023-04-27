@@ -3,7 +3,6 @@ import { Button } from 'components/Button/Button';
 import css from './contactForm.module.css';
 import { selectTasks } from 'Redux/selectors';
 import { addContact } from 'Redux/operations';
-
 import { BiUser, BiPhone } from 'react-icons/bi';
 
 export const ContactsForm = () => {
@@ -17,7 +16,6 @@ export const ContactsForm = () => {
     const contactExists = contacts.find(
       contact => contact.name.toLowerCase() === inputValue.toLowerCase()
     );
-
     if (contactExists) {
       alert(`${inputValue} is already in contacts.`);
       return;
@@ -28,13 +26,11 @@ export const ContactsForm = () => {
         number: form.elements.number.value,
       })
     );
-
     form.reset();
   };
 
   return (
     <form onSubmit={handleSubmit} className={css.container}>
-      {/* <label className={css.label}>Name</label> */}
       <div className={css.margin}>
         <span style={{ position: 'absolute' }}>
           <BiUser viewBox="-2 -2 24 24" />
@@ -48,7 +44,6 @@ export const ContactsForm = () => {
           required
         />
       </div>
-      {/* <label className={css.label}>Number</label> */}
       <div className={css.margin}>
         <span style={{ position: 'absolute', margin: '2px 2px 2px 1px' }}>
           <BiPhone viewBox="0 0 22 22" />

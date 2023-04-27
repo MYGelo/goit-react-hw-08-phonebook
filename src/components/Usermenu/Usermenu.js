@@ -2,10 +2,9 @@ import { useAuth } from 'hooks';
 import { useDispatch } from 'react-redux';
 import { logOut } from 'Redux/Auth/operations';
 import css from './Usermenu.module.css';
-
 import { BiLogOut } from 'react-icons/bi';
 
-export const UserMenu = () => {
+export default function UserMenu() {
   const dispatch = useDispatch();
   const { user } = useAuth();
 
@@ -21,4 +20,4 @@ export const UserMenu = () => {
       </button>
     </span>
   );
-};
+}

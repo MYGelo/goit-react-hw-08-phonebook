@@ -8,7 +8,6 @@ const filterInputId = nanoid();
 
 export const ContactFilter = () => {
   const dispatch = useDispatch();
-
   const filter = useSelector(selectStatusFilter);
 
   const onChange = e => {
