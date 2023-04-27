@@ -62,9 +62,7 @@ export const ContactsForm = () => {
           required
         />
       </div>
-      <Button className={css.btn} type="submit">
-        Add contact
-      </Button>
+      <Button type="submit">Add contact</Button>
     </form>
   );
 };

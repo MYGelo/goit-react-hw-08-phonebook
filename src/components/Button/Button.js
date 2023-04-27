@@ -1,3 +1,5 @@
+import css from './Button.module.css';
+
 export const Button = ({
   selected = false,
   type = 'button',
@@ -5,7 +7,7 @@ export const Button = ({
   ...otherProps
 }) => {
   return (
-    <button type={type} {...otherProps}>
+    <button className={css.btn} type={type} {...otherProps}>
       {children}
     </button>
   );

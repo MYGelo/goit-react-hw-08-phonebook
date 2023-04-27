@@ -1,3 +1,4 @@
+import { Button } from 'components/Button/Button';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteContact } from 'Redux/operations';
 import { selectStatusFilter, selectTasks } from 'Redux/selectors';
@@ -25,12 +26,15 @@ export const ContactList = () => {
                 : {contact.number}
               </span>
             </div>
-            <button
+            {/* <button
               type="button"
               onClick={() => dispatch(deleteContact(contact.id))}
             >
               Delete
-            </button>
+            </button> */}
+            <Button onClick={() => dispatch(deleteContact(contact.id))}>
+              Delete
+            </Button>
           </li>
         ))}
       </ul>
