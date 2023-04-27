@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { logOut } from 'Redux/Auth/operations';
 import css from './Usermenu.module.css';
 import { BiLogOut } from 'react-icons/bi';
+import { Button } from 'components/Button/Button';
 
 export default function UserMenu() {
   const dispatch = useDispatch();
@@ -11,13 +12,9 @@ export default function UserMenu() {
   return (
     <span className={css.position}>
       Hi, {user.name}{' '}
-      <button
-        type="button"
-        className={css.btn_style}
-        onClick={() => dispatch(logOut())}
-      >
+      <Button className={css.btn_style} onClick={() => dispatch(logOut())}>
         <BiLogOut viewBox="2 2 20 20" />
-      </button>
+      </Button>
     </span>
   );
 }

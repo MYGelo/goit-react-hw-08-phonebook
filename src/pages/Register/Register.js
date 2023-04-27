@@ -20,7 +20,7 @@ export default function Register() {
     form.reset();
   };
   return (
-    <form onSubmit={handleSubmit} autoComplete="off" className={css.container}>
+    <form onSubmit={handleSubmit} className={css.container}>
       <label>Name</label>
       <input
         className={css.inputs}
