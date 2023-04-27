@@ -1,0 +1,38 @@
+.contact__list {
+  padding: 0;
+  list-style: decimal;
+}
+
+.contact__list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 0px 0px 0px grey;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  border: 1px solid rgb(149, 149, 149);
+  border-radius: 14px;
+  margin: 3px 0;
+}
+.contact__list__item:hover {
+  border: 1px solid transparent;
+  box-shadow: 0px 1px 5px 3px grey;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact__list__item:nth-child(2n + 1) {
+  background-color: gainsboro;
+}
+
+.contact__style {
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact__list__name {
+  margin-left: 9px;
+}
+.contact__list__number {
+  margin-right: 5px;
+}

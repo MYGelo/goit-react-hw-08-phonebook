@@ -1,0 +1,23 @@
+.nav__link {
+  position: relative;
+  margin-left: 10px;
+  color: black;
+  text-decoration: none;
+  transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav__link:active,
+.nav__link:hover,
+.nav__link:active {
+  color: orange;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+
+  height: 41px;
+  box-shadow: 0px 2px 7px 0px grey;
+
+  margin-bottom: 10px;
+}
